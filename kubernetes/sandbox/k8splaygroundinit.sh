@@ -1,5 +1,5 @@
 #!/bin/bash
-yum install -y wget
+yum install -y wget sudo
 kubeadm init --apiserver-advertise-address $(hostname -i) >> /tmp/kudeadminit.out
 chmod 777 /tmp/kudeadminit.out
 useradd kubeadmtest
