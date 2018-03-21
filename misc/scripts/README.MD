@@ -1,6 +1,6 @@
 # How to use these scripts
 
-## To install an run asciinema (https://asciinema.org/) on Centos 7
+## To install and run asciinema (https://asciinema.org/) on Centos 7
 
 ```
 curl -sSL https://raw.githubusercontent.com/emc2ehv/containers/master/misc/scripts/asciinemacentos7.sh | bash
