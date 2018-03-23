@@ -17,7 +17,5 @@ COPY artifacts/index.html /www/
 
 EXPOSE 80
 
-STOPSIGNAL SIGTERM
-
 # Start nginx
-CMD ["nginx", "-g", "daemon off;"]
+CMD nginx
