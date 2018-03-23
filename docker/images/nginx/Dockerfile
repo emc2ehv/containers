@@ -5,7 +5,6 @@ LABEL maintainer="emc2ehv"
 
 # Install nginx
 RUN apk add --update nginx
-RUN apk add openrc --no-cache
 
 # Add user
 RUN adduser -D -g 'www' www
@@ -17,4 +16,4 @@ COPY artifacts/nginx.conf /etc/nginx/
 COPY artifacts/index.html /www/
 
 # Start nginx
-RUN rc-service nginx start
+RUN nginx
