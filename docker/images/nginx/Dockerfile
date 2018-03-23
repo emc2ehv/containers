@@ -1,6 +1,8 @@
 # Base
 FROM alpine:3.5
 
+LABEL maintainer="emc2ehv"
+
 # Install nginx
 RUN apk add --update nginx
 
