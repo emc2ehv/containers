@@ -16,4 +16,4 @@ COPY artifacts/nginx.conf /etc/nginx/
 COPY artifacts/index.html /www/
 
 # Start nginx
-rc-service nginx start
+RUN rc-service nginx start
