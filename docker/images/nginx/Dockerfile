@@ -16,4 +16,4 @@ COPY artifacts/nginx.conf /etc/nginx/
 COPY artifacts/index.html /www/
 
 # Start nginx
-RUN nginx
+CMD ["nginx", "-g", "daemon off;"]
