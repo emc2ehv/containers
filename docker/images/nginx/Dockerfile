@@ -15,5 +15,9 @@ RUN mv /etc/nginx/nginx.conf /etc/nginx/nginx.conf.orig
 COPY artifacts/nginx.conf /etc/nginx/
 COPY artifacts/index.html /www/
 
+EXPOSE 80
+
+STOPSIGNAL SIGTERM
+
 # Start nginx
 CMD ["nginx", "-g", "daemon off;"]
