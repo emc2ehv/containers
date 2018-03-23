@@ -5,10 +5,11 @@ LABEL maintainer="emc2ehv"
 
 # Install nginx
 RUN apk add --update nginx
+RUN apk add openrc --no-cache
 
 # Add user
 RUN adduser -D -g 'www' www
-RUN mkdir /www && chown -R www:www /var/lib/nginx && chown -R www:www /www
+RUN mkdir /www && chown -R www:www /var/lib/nginx && chown -R www:www /www && mkdir -p /run/nginx
 
 # Configure nginx
 RUN mv /etc/nginx/nginx.conf /etc/nginx/nginx.conf.orig
