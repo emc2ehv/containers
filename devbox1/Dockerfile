@@ -9,10 +9,15 @@ RUN groupadd --gid $USER_GID $USERNAME \
     && useradd --uid $USER_UID --gid $USER_GID -m $USERNAME \
     && usermod --shell /bin/bash mayank \
     #
-    # [Optional] Add sudo support. Omit if you don't need to install software after connecting.
+    # Add sudo support
     && apt-get update \
     && apt-get install -y sudo build-essential git golang-go\
     && echo $USERNAME ALL=\(root\) NOPASSWD:ALL > /etc/sudoers.d/$USERNAME \
     && chmod 0440 /etc/sudoers.d/$USERNAME
 
 USER $USERNAME
+
+RUN mkdir ~/script_tmp
+WORKDIR /home/mayank/script_tmp
+
+
